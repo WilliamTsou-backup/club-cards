@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>林麥可的名片</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --text: #f1f5f9;
+            --text-soft: #cbd5e1;
+            --accent: #7dd3fc;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+        }
+
+        .card {
+            min-height: 100vh;
+            display: flex;
+        }
+
+        .card__profile {
+            flex-basis: 33.333%;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 24px 8px;
+            text-align: center;
+            border-right: 1px solid #475569;
+        }
+
+        .card__content {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 24px 32px;
+            background-color: var(--surface);
+        }
+
+        .card__profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 12px var(--accent);
+        }
+
+        .card__name {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .card__nickname {
+            margin: 0;
+            font-size: 1.25rem;
+            color: var(--text-soft);
+        }
+
+        .card__content h2 {
+            margin: 0;
+            font-size: 1.125rem;
+        }
+
+        .card__content h2::after {
+            content: "";
+            display: block;
+            width: 96px;
+            height: 3px;
+            margin-top: 8px;
+            background-color: var(--accent);
+        }
+
+        .card__content ol {
+            margin: 12px 0 0;
+            padding-left: 1.5em;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 560px) {
+            .card__profile img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .card__name {
+                font-size: 1.5rem;
+            }
+
+            .card__content {
+                padding-inline: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <article class="card">
+
+            <header class="card__profile">
+                <img src="japan.jpg" alt="照片">
+                <h1 class="card__name">林品翰</h1>
+                <p class="card__nickname">Michael</p>
+            </header>
+
+            <section class="card__content">
+                <h2>想畢業的碩士生QQ</h2>
+                <ol>
+                    <li>台中人</li>
+                    <li>愛JPOP</li>
+                    <li>好想出國玩...</li>
+                </ol>
+            </section>
+
+        </article>
+    </main>
+</body>
+
+</html>
